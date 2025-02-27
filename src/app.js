@@ -9,7 +9,7 @@ app.use(express.json())
 app.use(morgan('dev'))
 app.use(cors({
   origin:
-    "http://192.168.1.2:5173/"
+    "*"
 }))
 
 app.use(router)
