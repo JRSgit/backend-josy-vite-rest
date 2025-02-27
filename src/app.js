@@ -8,7 +8,8 @@ const app = express()
 app.use(express.json())
 app.use(morgan('dev'))
 app.use(cors({
-  origin: "https://backend-josy-vite-rest.onrender.com/"
+  origin: ["https://backend-josy-vite-rest.onrender.com/",
+    "http://192.168.1.2:5173/"]
 }))
 
 app.use(router)
