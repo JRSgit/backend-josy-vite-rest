@@ -7,7 +7,9 @@ const app = express()
 
 app.use(express.json())
 app.use(morgan('dev'))
-app.use(cors({ origin: "*" }))
+app.use(cors({
+  origin: "https://backend-josy-vite-rest.onrender.com/"
+}))
 
 app.use(router)
 

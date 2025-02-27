@@ -56,7 +56,7 @@ class EntregasCtrl {
   async update(req, res) {
     try {
       const { id } = req.params;
-      const { status } = req.body;
+      const { status, data, quantidade } = req.body;
 
 
       const entrega = await prisma.entregas.update({
@@ -65,6 +65,8 @@ class EntregasCtrl {
         },
         data: {
           status,
+          data,
+          quantidade
         }
       })
 
